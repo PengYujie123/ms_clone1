@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>812</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>812</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>文件 File(F)</string>
+    </property>
+    <addaction name="actionopen_seismograms"/>
+    <addaction name="actionopen_mining_map"/>
+    <addaction name="actionprint"/>
+    <addaction name="actionclose"/>
+    <addaction name="actionexit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionabout"/>
+    <addaction name="actionhelp"/>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="actiontime"/>
+    <addaction name="actionpara"/>
+    <addaction name="actionlocate_way"/>
+    <addaction name="action_3"/>
+    <addaction name="actionfolder"/>
+    <addaction name="actioncad"/>
+   </widget>
+   <widget class="QMenu" name="menu_Window">
+    <property name="title">
+     <string>窗口 </string>
+    </property>
+    <addaction name="actionlast_seismograms"/>
+    <addaction name="actionnext_seismograms"/>
+    <addaction name="actionReset"/>
+    <addaction name="actionside_by_side"/>
+   </widget>
+   <widget class="QMenu" name="edit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionundo"/>
+    <addaction name="actionredo"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="edit"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_Window"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actiontime"/>
+   <addaction name="separator"/>
+   <addaction name="actionopen_seismograms"/>
+   <addaction name="actionlast_seismograms"/>
+   <addaction name="actionnext_seismograms"/>
+   <addaction name="actionReset"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionopen_seismograms">
+   <property name="text">
+    <string>打开微震文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开解析W震动文件，并以波形显示</string>
+   </property>
+  </action>
+  <action name="actionlast_seismograms">
+   <property name="text">
+    <string>上一个</string>
+   </property>
+   <property name="toolTip">
+    <string>W震动文件的切换，切换至上一文件</string>
+   </property>
+  </action>
+  <action name="actionnext_seismograms">
+   <property name="text">
+    <string>下一个</string>
+   </property>
+   <property name="toolTip">
+    <string>W震动文件的切换，切换至下一文件</string>
+   </property>
+  </action>
+  <action name="actionopen_mining_map">
+   <property name="text">
+    <string>打开矿图文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开CAD文件</string>
+   </property>
+  </action>
+  <action name="actionclose">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="toolTip">
+    <string>关闭所有图形显示区所有窗口</string>
+   </property>
+  </action>
+  <action name="actionexit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出本软件</string>
+   </property>
+  </action>
+  <action name="actionreset">
+   <property name="text">
+    <string>reset</string>
+   </property>
+  </action>
+  <action name="actionside_by_side">
+   <property name="text">
+    <string>隐藏标波窗口</string>
+   </property>
+  </action>
+  <action name="actionstack">
+   <property name="text">
+    <string>层叠显示窗口</string>
+   </property>
+  </action>
+  <action name="actionMinimize">
+   <property name="text">
+    <string>窗口最小化</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>显示标波窗口</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionPp">
+   <property name="text">
+    <string>Pp</string>
+   </property>
+  </action>
+  <action name="actionPk">
+   <property name="text">
+    <string>Pk</string>
+   </property>
+  </action>
+  <action name="actionSp">
+   <property name="text">
+    <string>Sp</string>
+   </property>
+  </action>
+  <action name="actionSk">
+   <property name="text">
+    <string>Sk</string>
+   </property>
+  </action>
+  <action name="actioncancel">
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </action>
+  <action name="actionZn">
+   <property name="text">
+    <string>Zn</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionSY">
+   <property name="text">
+    <string>SY+</string>
+   </property>
+  </action>
+  <action name="actionSY_2">
+   <property name="text">
+    <string>SY-</string>
+   </property>
+  </action>
+  <action name="actionASY">
+   <property name="text">
+    <string>ASY</string>
+   </property>
+  </action>
+  <action name="actionX">
+   <property name="text">
+    <string>X+</string>
+   </property>
+  </action>
+  <action name="actionX_2">
+   <property name="text">
+    <string>X-</string>
+   </property>
+  </action>
+  <action name="actionY">
+   <property name="text">
+    <string>Y+</string>
+   </property>
+  </action>
+  <action name="actionY_2">
+   <property name="text">
+    <string>Y-</string>
+   </property>
+  </action>
+  <action name="actionSP">
+   <property name="text">
+    <string>SP</string>
+   </property>
+  </action>
+  <action name="actionKX">
+   <property name="text">
+    <string>KX</string>
+   </property>
+  </action>
+  <action name="actionKY">
+   <property name="text">
+    <string>KY</string>
+   </property>
+  </action>
+  <action name="actionKYY">
+   <property name="text">
+    <string>KYY</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>+</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>-</string>
+   </property>
+  </action>
+  <action name="actionPwave_filt">
+   <property name="text">
+    <string>P波标记筛选</string>
+   </property>
+  </action>
+  <action name="actionPwave_cut">
+   <property name="text">
+    <string>P波标记截取</string>
+   </property>
+  </action>
+  <action name="actionSwave_filt">
+   <property name="text">
+    <string>S波标记筛选</string>
+   </property>
+  </action>
+  <action name="actionSwave_cut">
+   <property name="text">
+    <string>S波标记截取</string>
+   </property>
+  </action>
+  <action name="actionShow_Hide">
+   <property name="text">
+    <string>Show/Hide</string>
+   </property>
+  </action>
+  <action name="actionCancel">
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionDelete_2">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionprint">
+   <property name="text">
+    <string>打印</string>
+   </property>
+   <property name="toolTip">
+    <string>打印当前页面</string>
+   </property>
+  </action>
+  <action name="actionauto_sign_wave">
+   <property name="text">
+    <string>自动标波</string>
+   </property>
+  </action>
+  <action name="actionwaveform_chara">
+   <property name="text">
+    <string>波形属性</string>
+   </property>
+  </action>
+  <action name="actionwaveform_zoom">
+   <property name="text">
+    <string>波形缩放工具箱</string>
+   </property>
+  </action>
+  <action name="actionwindow_switch">
+   <property name="text">
+    <string>窗口切换工具箱</string>
+   </property>
+  </action>
+  <action name="actionsign_wave_tool">
+   <property name="text">
+    <string>标波工具箱</string>
+   </property>
+  </action>
+  <action name="actionlocate_tool">
+   <property name="text">
+    <string>定位工具箱</string>
+   </property>
+  </action>
+  <action name="actionpara">
+   <property name="text">
+    <string>传感器</string>
+   </property>
+  </action>
+  <action name="actionlocate_way">
+   <property name="text">
+    <string>定位算法</string>
+   </property>
+  </action>
+  <action name="actionmin_algorithm">
+   <property name="text">
+    <string>最小算法</string>
+   </property>
+  </action>
+  <action name="actioninit_para">
+   <property name="text">
+    <string>初始参数</string>
+   </property>
+  </action>
+  <action name="actiondimension_set">
+   <property name="text">
+    <string>维数设置</string>
+   </property>
+  </action>
+  <action name="actionpara_set">
+   <property name="text">
+    <string>参数设置</string>
+   </property>
+  </action>
+  <action name="actionshow_set">
+   <property name="text">
+    <string>显示设置</string>
+   </property>
+  </action>
+  <action name="actionsign_result">
+   <property name="text">
+    <string>波形标记结果</string>
+   </property>
+  </action>
+  <action name="actioncalculate">
+   <property name="text">
+    <string>手动计算</string>
+   </property>
+  </action>
+  <action name="actionamplitude_calculate">
+   <property name="text">
+    <string>自动以振幅计算</string>
+   </property>
+  </action>
+  <action name="actionintegral_calculate">
+   <property name="text">
+    <string>自动以积分计算</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="text">
+    <string>撤销</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="text">
+    <string>恢复</string>
+   </property>
+  </action>
+  <action name="actiontime">
+   <property name="text">
+    <string>时间</string>
+   </property>
+  </action>
+  <action name="actionfolder">
+   <property name="text">
+    <string>微震波形文件夹</string>
+   </property>
+  </action>
+  <action name="actioncad">
+   <property name="text">
+    <string>CAD文件路径</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>微震事件显示</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionhelp">
+   <property name="text">
+    <string>使用帮助</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
